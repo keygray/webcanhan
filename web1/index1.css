@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(key.jpg), url(key.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200vh;
+
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main ul {
+    float: right;
+    margin-top: 25px;
+}
+
+.main ul li {
+    display: inline-block;
+}
+
+.main ul li a {
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    color: aliceblue;
+    transition: 0.6s ease;
+    border-radius: 20px;
+}
+
+.main ul li a:hover {
+    background: whitesmoke;
+    color: black;
+    padding-right: 30px;
+}
+
+.main .active a {
+    background: whitesmoke;
+    color: black;
+}
+
+
+.title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.title h1 {
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 60px;
+}
+
+.botton {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.btn {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 20px;
+    border: 1px solid aqua;
+    transition: 0.6s ease;
+    outline: none;
+    margin-right: 20px;
+    transition: 0.4s ease;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    color: aqua;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+.sidebar {
+    left: -250px;
+    margin-top: 35px;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    transition: all .6s ease;
+}
+
+.sidebar ul a {
+    color: aliceblue;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.sidebar ul a:hover {
+    padding-left: 80px;
+    color: aqua;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+}
+
+label #btn {
+    top: 15px;
+    left: 40px;
+    color: white;
+    font-size: 30px;
+    transition: all .5s;
+}
+
+label #cancel {
+    top: 13px;
+    left: -215px;
+    color: white;
+    font-size: 32px;
+    transition: all .6s ease;
+    z-index: 1111;
+}
+
+label #btn:hover,
+label #cancel:hover {
+    color: aqua;
+}
+
+#check:checked~.sidebar {
+    left: 0px;
+}
+
+#check:checked~label #btn {
+    left: 205px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#check:checked~label #cancel {
+    left: 215px;
+}
+
+
+.container {
+    position: absolute;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    top: 130%;
+    left: 10%;
+}
+
+.container .box {
+    position: relative;
+    width: 280px;
+    height: 420px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(400px at center 100px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.container .box:hover .imgBx {
+    clip-path: circle(80px at center 100px);
+    transition-delay: 0;
+}
+
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container .box .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 55%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+.container .box .content h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.container .box .content a {
+    display: inline-block;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container .box .content h2,
+.container .box .content p,
+.container .box .content a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .6s;
+}
+
+.container .box:hover .content h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.container .box:hover .content p {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+}
+
+.container .box:hover .content a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.9s;
+}
