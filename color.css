@@ -89,6 +89,16 @@ h1 {
     text-decoration: none;
 }
 
+.body__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
 .nav__bar-phone {
     display: none;
 }
@@ -190,6 +200,10 @@ label #btn:hover {
         display: none;
     }
 
+    .body__overlay {
+        display: block;
+    }
+
     .nav__bar-phone {
         display: block;
     }
@@ -215,8 +229,8 @@ label #btn:hover {
         justify-content: space-evenly;
     }
 
-    .botton-item__link {
-        background-color: #999;
+    .botton .botton-item__link {
+        margin-right: 0;
     }
 
     label #btn {
