@@ -89,28 +89,41 @@ h1 {
     text-decoration: none;
 }
 
-.sidebar {
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: transparent;
-    transition: all .5s ease;
-    margin-top: 28px;
+.nav__bar-phone {
+    display: none;
 }
 
+.sidebar {
+    position: fixed;
+    left: -200px;
+    width: 200px;
+    background: transparent;
+    transition: all .5s ease;
+    padding-bottom: 30px;
+    border-radius: 2px;
+}
+
+.sidebar-list {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.sidebar-list li {
+    display: block;
+}
 
 .sidebar ul a {
     display: block;
     color: aliceblue;
     height: 100%;
     width: 100%;
-    line-height: 65px;
-    padding-left: 52px;
+    line-height: 20px;
+    padding-left: 60px;
     box-sizing: border-box;
     font-size: 20px;
     transition: .4s;
     margin-top: 10px;
+    transition: all .8s ease;
 }
 
 .sidebar ul li a:hover {
@@ -135,7 +148,7 @@ label #cancel {
 
 label #btn {
     left: 40px;
-    top: 15px;
+    top: 10px;
     font-size: 35px;
     color: white;
     transition: all .5s;
@@ -143,8 +156,8 @@ label #btn {
 
 label #cancel {
     z-index: 1111;
-    left: -205px;
-    top: 17px;
+    left: -170px;
+    top: 10px;
     font-size: 30px;
     color: white;
     transition: all .5s;
@@ -160,11 +173,53 @@ label #btn:hover {
 }
 
 #check:checked~label #btn {
-    left: 200px;
+    left: 160px;
     opacity: 0;
     pointer-events: none;
 }
 
 #check:checked~label #cancel {
-    left: 205px;
+    left: 170px;
+}
+
+/* mobile  */
+
+/* moblie */
+@media only screen and (max-width: 720px) {
+    .main {
+        display: none;
+    }
+
+    .nav__bar-phone {
+        display: block;
+    }
+
+    .sidebar {
+        background-color: black;
+        z-index: 1;
+        margin-top: 0;
+    }
+
+    .title {
+        top: 40%;
+        text-align: center;
+    }
+
+    .botton {
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .botton-item__link {
+        background-color: #999;
+    }
+
+    label #btn {
+        left: 30px;
+    }
 }

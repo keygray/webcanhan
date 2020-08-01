@@ -258,3 +258,10 @@ label #cancel:hover {
     transform: translateY(0px);
     transition-delay: 0.9s;
 }
+
+/* moblie */
+@media only screen and (max-width: 720px) {
+    .main {
+        display: none;
+    }
+}
